@@ -85,9 +85,14 @@ for url in urls:
         if person == "" or text == "":
             continue
 
+        text_original = text
         # "「"と"」"を除去する
-        text = text.replace("「", "").replace("」", "")
-        text = text.replace("「", "").replace("」", "")
+        text = text.replace("「", "")
+        text = text.replace("」", "")
+        text = text.replace("「", "")
+        text = text.replace("」", "")
+        text = text.replace("「", "")
+        text = text.replace("」", "")
 
         if text == "……":
             continue
@@ -103,7 +108,8 @@ for url in urls:
             "subtitle": subtitle,
             "place": place,
             "person": person,
-            "text": text
+            "text": text,
+            "text_original": text_original
         }
         print(row)
         text_list.append(row)
