@@ -87,6 +87,16 @@ for url in urls:
 
         # "「"と"」"を除去する
         text = text.replace("「", "").replace("」", "")
+        text = text.replace("「", "").replace("」", "")
+
+        if text == "……":
+            continue
+        if text == "……！":
+            continue
+        if text == "……？":
+            continue
+        if text == "…………":
+            continue
 
         row = {
             "episode": episode,
