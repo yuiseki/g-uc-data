@@ -85,6 +85,9 @@ for url in urls:
         if person == "" or text == "":
             continue
 
+        # "「"と"」"を除去する
+        text = text.replace("「", "").replace("」", "")
+
         row = {
             "episode": episode,
             "subtitle": subtitle,
